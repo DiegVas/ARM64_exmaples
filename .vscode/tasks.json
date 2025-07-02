@@ -11,6 +11,41 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "Compilar por makefile",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/tui && make archivo=main.s",
+      "options": {
+        "cwd": "${workspaceFolder}/tui"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Compilar y ejecutar con makefile",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}/tui && make archivo=main.s && cd bin_as && ./main_asm",
+      "options": {
+        "cwd": "${workspaceFolder}/tui"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Execute main directamente",
+      "type": "shell",
+      "command": "./main",
+      "options": {
+        "cwd": "${workspaceFolder}/tui/bin_as"
+      },
+      "problemMatcher": []
     }
   ]
 }
